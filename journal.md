@@ -28,6 +28,19 @@ Watched a few more youtube videos:
 3. #9 Navbar
 4. #10 Cards
 
+## Wednesday 3/13/24
+Watched a few more youtube vieos from the Boostrap5 playlist
+
+1. Accordin
+2. Lists
+3. Icons
+
+
+
+1. #14 Forms
+2. #15 Tooltips
+3. # 16 Modals
+
 
 
 
