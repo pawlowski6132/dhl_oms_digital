@@ -41,3 +41,8 @@ Watched a few more youtube vieos from the Boostrap5 playlist
 ## Thursday - 
 Jack had my computer at Decca
 
+## Monday 4/1/24
+Slowing down and starting to build a navbar and sidebar. I have the basic building blocks but I want to understand how everything's working in greater detail so I can make adjustments without breaking anything.
+
+I have a navbar and sidebar included now.
+
