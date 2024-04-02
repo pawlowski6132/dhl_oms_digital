@@ -46,3 +46,12 @@ Slowing down and starting to build a navbar and sidebar. I have the basic buildi
 
 I have a navbar and sidebar included now.
 
+## Tuesday 4/2/24
+Not a lot of work but, nice impact. I was able to find a way to change the background color of the bootstrap navbar component: I put a custom class in a custom.css file and then add that class in the navbar. 
+
+I also changed the navbar type to include a logo which I downloaded and added to the project in the assets file. However, I did have a little trouble showing the jpg because the assets folder was outside of the index.html path so, I had to move the whole assets folder to the srce folder to I can just reference the relative path.
+
+I also found a way to change the sidebar color from black to "light" without using a custom class.
+
+I also just changed the labels around so, now it's starting to take shape.
+
