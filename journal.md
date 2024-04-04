@@ -69,4 +69,5 @@ imagemap.org
 
 I got a prototype working but, the coordinates of the map are off. I'll have to muck with that but the POC works and I was even able to embed it into a teams channel.
 
+Also, i had to link the dpdb1.html page to the index page in order for it to load over the internet. i'll fix that later too.
 
