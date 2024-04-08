@@ -58,6 +58,8 @@ I also just changed the labels around so, now it's starting to take shape.
 ## Thursday 4/4/24
 I'm re-thinking my approach again. Now, I'm just going to build one solution for the DPDB1 and make it really simple with just a nav bar at the top, an image map as the main page to display and then click-outs to the information. Each solution will have it's own page and it will be a channel in the teams site.
 
+Note that the header was NOT using BOOTSTRAP
+
 I used THIS video to help with the header build
 https://www.youtube.com/watch?v=GxwHXxumdQk&t=326
 
