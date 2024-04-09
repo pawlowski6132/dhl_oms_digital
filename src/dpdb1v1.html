@@ -14,18 +14,21 @@
     <body>
 
         <!--Navbar built using boostrap 4/8/24-->
-        <nav class="navbar custom-navbar">
+        <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-xl">
                 <a href="#select_id" class="navbar-brand">
                 <img src="assets/dhl_logo.jpg" alt="DHL Logo" class="dhl-logo" width="60" height="50" class="d-inline-block align-text-top">
                 <span class="fw-bold text-secondary">
-                    AEMCE Innovation & Analytics
+                    AEMCE Analytics - Digital OMS
                 </span>
                 
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Homey</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link active" aria-current="page" href="#">DPDB1</a>
+                    <a class="nav-link" href="#">DPDB2</a>
+                    <a class="nav-link" href="#">DPEB3</a>
+                    <a class="nav-link" href="#">Tactical</a>
+                    <a class="nav-link" href="#">Digital Gemba</a>
+                    <a class="nav-link" href="#">OMS</a>
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                   </div>
               
@@ -33,7 +36,7 @@
             </div>
         </nav>
 
-        <nav class="navbar navbar-expand-lg custom-navbar">
+       <!--  <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">AEME Innovation and Analytics</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +59,60 @@
                 </ul>
               </div>
             </div>
-          </nav>
+          </nav> -->
         <script src="" async defer></script>
+
+        <div class="container">
+        <!-- image map -->
+        <!-- mx-auto centers the image, pt-3 gives it top padding -->
+        <img src="assets/dpdb1.JPG" usemap="#image_map" class="rounded mx-auto pt-3">
+        <map name="image_map">
+            <area alt="safety" title="safety" href="safety.html" coords="1,67,178,416" shape="rect">
+            <area alt="quality" title="quality" href="#" data-bs-toggle="modal" data-bs-target="#myModal" coords="188,67,319,379" shape="rect">
+            <area alt="delivery" title="delivery" href="" coords="325,67,454,377" shape="rect">
+            <area alt="productivity" title="productivity" href="" coords="465,69,597,380" shape="rect">
+            <area alt="direct_hours" title="direct_hours" href="" coords="603,67,736,380" shape="rect">
+            <area alt="cost" title="cost" href="" coords="745,67,873,375" shape="rect">
+            <area alt="metrics_definitions" title="metrics_definitions" href="" coords="829,3,885,61" shape="rect">
+            <area alt="continuous_improvement" title="continuous_improvement" href="" coords="888,-3,1162,608" shape="rect">
+            <area alt="workload" title="workload" href="" coords="555,424,872,603" shape="rect">
+            <area alt="focus" title="focus" href="" coords="287,422,542,607" shape="rect">
+            <area alt="people" title="people" href="safety.html" coords="-3,424,275,595" shape="rect">
+            <area alt="time_stamp" title="time_stamp" href="" coords="1,3,167,48" shape="rect">
+            <area alt="site_shift" title="site_shift" href="" coords="608,4,834,56" shape="rect">
+        </map>
+        </div>
+
+
+        <iframe title="NEW OC Network Digital PD" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=90a4379e-7a35-4581-86aa-f008561224f2&autoAuth=true&ctid=cd99fef8-1cd3-4a2a-9bdf-15531181d65e" frameborder="0" allowFullScreen="true"></iframe>
+
+        <!-- Button to launch the modal -->
+<a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</a>
+
+<!-- Modal -->
+<div class="modal fade modal-dialog-scrollable" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Quality</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Your modal content goes here -->
+        <span>This is all information about safety</span>
+        lorem100
+        <img src="assets/dhl_logo.jpg" alt="DHL Logo" class="dhl-logo" width="60" height="50" class="d-inline-block align-text-top">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     </body>
 </html>
