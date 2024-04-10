@@ -14,7 +14,7 @@
     <body>
 
         <!--Navbar built using boostrap 4/8/24-->
-        <nav class="navbar navbar-expand-lg custom-navbar">
+        <nav class="navbar sticky-top navbar-expand-lg custom-navbar">
             <div class="container-xl">
                 <a href="#select_id" class="navbar-brand">
                 <img src="assets/dhl_logo.jpg" alt="DHL Logo" class="dhl-logo" width="60" height="50" class="d-inline-block align-text-top">
@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#">Tactical</a>
                     <a class="nav-link" href="#">Digital Gemba</a>
                     <a class="nav-link" href="#">OMS</a>
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
                   </div>
               
                 </a>
@@ -67,7 +67,7 @@
         <!-- mx-auto centers the image, pt-3 gives it top padding -->
         <img src="assets/dpdb1.JPG" usemap="#image_map" class="rounded mx-auto pt-3">
         <map name="image_map">
-            <area alt="safety" title="safety" href="safety.html" coords="1,67,178,416" shape="rect">
+            <area alt="safety" title="safety" href="#" data-bs-toggle="modal" data-bs-target="#myModal" coords="1,67,178,416" shape="rect">
             <area alt="quality" title="quality" href="#" data-bs-toggle="modal" data-bs-target="#myModal" coords="188,67,319,379" shape="rect">
             <area alt="delivery" title="delivery" href="" coords="325,67,454,377" shape="rect">
             <area alt="productivity" title="productivity" href="" coords="465,69,597,380" shape="rect">
@@ -83,9 +83,9 @@
         </map>
         </div>
 
-
-        <iframe title="NEW OC Network Digital PD" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=90a4379e-7a35-4581-86aa-f008561224f2&autoAuth=true&ctid=cd99fef8-1cd3-4a2a-9bdf-15531181d65e" frameborder="0" allowFullScreen="true"></iframe>
-
+        <div class="container">
+        <iframe class="rounded mx-auto pt-3" title="NEW OC Network Digital PD" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=90a4379e-7a35-4581-86aa-f008561224f2&autoAuth=true&ctid=cd99fef8-1cd3-4a2a-9bdf-15531181d65e" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
         <!-- Button to launch the modal -->
 <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</a>
 
@@ -94,19 +94,83 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Quality</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Safety</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <!-- Your modal content goes here -->
-        <span>This is all information about safety</span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta aut, ratione incidunt accusantium fuga quidem voluptatibus ad aliquid tenetur ipsam iste facere praesentium? Sunt recusandae at alias consectetur iste aliquam perspiciatis, ab deserunt vel velit a aut, laboriosam temporibus nostrum! Laborum totam atque, ipsum id, eveniet obcaecati reprehenderit qui dicta consectetur in ducimus minus officia deserunt. Deserunt illo corrupti aperiam? Quam voluptatibus cum rem, blanditiis molestiae sit pariatur? Illum, voluptatem fugiat quasi, corporis blanditiis, harum maxime inventore fuga officia dolorem obcaecati quae error iste? Dolores est eligendi, laudantium vel in porro quibusdam ex dolorem eius, error modi earum harum!
-        
+        <p><strong>Required</strong>:</p>
+        <ul>
+        <li>Safety cross must be used at the top, and displays the current month.</li>
+        <ul>
+        <li>Tool tip within the safety cross to allow user to see the incident.</li>
+        </ul>
+        <li>Days Safe is to be below the Safety Cross.</li>
+        <li>Safety Message to be below Days Safe.</li>
+        </ul>
+        <p><strong>Safety Cross</strong></p>
+        <ul>
+        <li>Visual: Synoptic Panel</li>
+        <li>Background SVG Image: (link)</li>
+        <li>Tooltips contain Incident description, type, and created by</li>
+        <li>Colors</li>
+        <ul>
+        <li>Green (Safe) -&nbsp; #5D8158</li>
+        <li>Yellow (Near Miss/Non recordable incident) - #FFE066</li>
+        <li>Red (Recordable incident) - #E56970</li>
+        </ul>
+        <li>Logics query below</li>
+        <ul>
+        <li>Join Incident Master table with Personal Injury table</li>
+        <ul>
+        <li>Personal injury table has the Recordable Incident column</li>
+        </ul>
+        </ul>
+        <li>Data set up</li>
+        <ul>
+        <li>Pull in Logics Safety data using query below</li>
+        <li>Create reference of Date_Dim table and use Full_Dt and DoM_Nbr</li>
+        <li>Merge Logics Safety table into Dates Table on Full_Dt = Date of Occurence</li>
+        <li>Create conditional column that tags safe days as 0, non recordable incident days as 1, and recordable incidents as 2</li>
+        <li>Set up visual as shown below</li>
+        </ul>
+        </ul>
+        <p><strong>Tooltip:</strong></p>
+        <ul>
+        <li>The user should be able to hover a day that an incident occurred and see the detail associated with that incident.</li>
+        <li>Minimum Data Pieces</li>
+        <ul>
+        <li>Site Location (if a network board).</li>
+        <li>Status</li>
+        <li>Description</li>
+        </ul>
+        </ul>
+        <p><strong>SQL Query (Replace SMRU with your site)</strong></p>
+        <p><em>SELECT</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a.[Incident_No]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Sub_Incident_Number]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,b.[Recordable_Injury]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Person_Responsible_Master_<wbr />Incident]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Date_and_Time_of_<wbr />Occurrence]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Date_Reported_to_<wbr />Supervisor]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[DHL_Date_Created]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Created_By]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Location]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Incident_Description]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Description_Of_Incident_<wbr />Location]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Sub_Incident_Type]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[Date_of_Occurrence]</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ,a.[DWH_INSERT_DATE]</em></p>
+        <p><em>&nbsp; FROM [logics_final].[logics_<wbr />Incident_1396_Mgmt_Master_<wbr />final]a</em></p>
+        <p><em>&nbsp; Left Join</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [logics_final].[logics_<wbr />Incident_3333_Personal_Injury_<wbr />final]b</em></p>
+        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ON a.[Sub_Incident_Number] = b.[Sub_Incident_Number]</em></p>
+        <p><em>&nbsp; where a.location like '%SMRU0840%'</em></p>
         <img src="assets/dhl_logo.jpg" alt="DHL Logo" class="dhl-logo" width="60" height="50" class="d-inline-block align-text-top">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
   </div>
