@@ -11,6 +11,7 @@
         <!-- link to bootstrap css -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
+    
     <body>
 
         <!--Navbar built using boostrap 4/8/24-->
@@ -19,16 +20,30 @@
                 <a href="#select_id" class="navbar-brand">
                 <img src="assets/dhl_logo.jpg" alt="DHL Logo" class="dhl-logo" width="60" height="50" class="d-inline-block align-text-top">
                 <span class="fw-bold text-secondary">
-                    AEMCE Analytics - Digital OMS
+                  Digital OMS
                 </span>
                 
                 <div class="navbar-nav">
+              
                     <a class="nav-link active" aria-current="page" href="#">DPDB1</a>
                     <a class="nav-link" href="#">DPDB2</a>
                     <a class="nav-link" href="#">DPEB3</a>
                     <a class="nav-link" href="#">Tactical</a>
                     <a class="nav-link" href="#">Digital Gemba</a>
                     <a class="nav-link" href="#">OMS</a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        DPDB1
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Training Material</a></li>
+                        <li><a class="dropdown-item" href="#">Site Videos</a></li>
+                        <li><a class="dropdown-item" href="#">PowerApp Setup</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Download PBIX Template</a></li>
+                      </ul>
+                    </li>
+                    
                     <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
                   </div>
               
@@ -36,40 +51,15 @@
             </div>
         </nav>
 
-       <!--  <nav class="navbar navbar-expand-lg custom-navbar">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">AEME Innovation and Analytics</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav> -->
-        <script src="" async defer></script>
-
+        <!--Image map-->
         <div class="container">
-        <!-- image map -->
+        <h4 class="text-center pt-3">Digital Performance Dialog Board 1</h4>
         <!-- mx-auto centers the image, pt-3 gives it top padding -->
         <img src="assets/dpdb1.JPG" usemap="#image_map" class="rounded mx-auto pt-3">
         <map name="image_map">
-            <area alt="safety" title="safety" href="#" data-bs-toggle="modal" data-bs-target="#myModal" coords="1,67,178,416" shape="rect">
-            <area alt="quality" title="quality" href="#" data-bs-toggle="modal" data-bs-target="#myModal" coords="188,67,319,379" shape="rect">
-            <area alt="delivery" title="delivery" href="" coords="325,67,454,377" shape="rect">
+            <area alt="safety" title="safety" href="#" data-bs-toggle="modal" data-bs-target="#SafetyModal" coords="1,67,178,416" shape="rect">
+            <area alt="quality" title="quality" href="#" data-bs-toggle="modal" data-bs-target="#QualityModal" coords="188,67,319,379" shape="rect">
+            <area alt="delivery" title="delivery" href="#" data-bs-toggle="modal" data-bs-target="#DeliveryModal" coords="325,67,454,377" shape="rect">
             <area alt="productivity" title="productivity" href="" coords="465,69,597,380" shape="rect">
             <area alt="direct_hours" title="direct_hours" href="" coords="603,67,736,380" shape="rect">
             <area alt="cost" title="cost" href="" coords="745,67,873,375" shape="rect">
@@ -82,15 +72,17 @@
             <area alt="site_shift" title="site_shift" href="" coords="608,4,834,56" shape="rect">
         </map>
         </div>
-
+<!--Built in PowerBi Report-->
         <div class="container">
+          <h4 class="text-center pt-3">Owens Corning LIVE Production DPDB1</h4>
         <iframe class="rounded mx-auto pt-3" title="NEW OC Network Digital PD" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=90a4379e-7a35-4581-86aa-f008561224f2&autoAuth=true&ctid=cd99fef8-1cd3-4a2a-9bdf-15531181d65e" frameborder="0" allowFullScreen="true"></iframe>
         </div>
-        <!-- Button to launch the modal -->
-<a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</a>
 
-<!-- Modal -->
-<div class="modal fade modal-dialog-scrollable" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Href link to launch the modal -->
+<!-- <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</a> -->
+
+<!-- Safety Modal -->
+<div class="modal fade modal-dialog-scrollable" id="SafetyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -98,7 +90,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- Your modal content goes here -->
+        <!-- Safety modal dialog box content -->
         <p><strong>Required</strong>:</p>
         <ul>
         <li>Safety cross must be used at the top, and displays the current month.</li>
@@ -176,8 +168,132 @@
   </div>
 </div>
 
+<!-- Quality Modal -->
+<div class="modal fade modal-dialog-scrollable" id="QualityModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Quality</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Safety modal dialog box content -->
+        <p><strong>Required</strong></p>
+        <ul>
+        <li>Bar chart with goal line&nbsp;</li>
+        <li>Yesterday's value in the top right of chart</li>
+        </ul>
+        <p><strong>Optional</strong></p>
+        <ul>
+        <li>Optional #1:&nbsp; Summary Chart below the Required chart.</li>
+        <ul>
+        <li>Purpose:&nbsp; Interactive summary chart of categories that count against our goal.</li>
+        <li>Suggested time period of information:&nbsp; Rolling 30 days</li>
+        <li>Functionality:&nbsp;&nbsp;</li>
+        <ul>
+        <li>Ability to click on a bar in the Required chart to view the number of occurrences of each category that occurred on that selected day.</li>
+        </ul>
+        <li>Bar Direction:&nbsp; Vertical or Horizontal</li>
+        <li>Tool tip:&nbsp; Allow user to hoover over any selected bar to see the summary information.</li>
+        <li>Suggested Use:&nbsp; When few instances occur on a daily basis.&nbsp;</li>
+        </ul>
+        </ul>
+        <ul>
+        <li>Optional #2:&nbsp; Stacked bar chart below the required bar chart.</li>
+        <ul>
+        <li>Purpose:&nbsp; Interactive breakdown chart of items that went against our goal.</li>
+        <li>Suggested time period of information:&nbsp; This should equal the number of days/bars that are in the Required chart.&nbsp;</li>
+        <li>Bar Direction:&nbsp; Vertical.</li>
+        <li>Tool tip:&nbsp; Allow user to hoover over any selected bar to see the summary information.</li>
+        <li>Functionality:&nbsp; Provides a breakdown of what occurred for each day and enables the ability to highlight a particular day of focus by selecting a day from the Required chart</li>
+        </ul>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Quality Modal End -->
 
+<!-- Delivery Modal -->
+<div class="modal fade modal-dialog-scrollable" id="DeliveryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delivery</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Safety modal dialog box content -->
+        <p><strong>Required</strong></p>
+        <ul>
+        <li>Bar chart with goal line</li>
+        <li>Yesterday's value in top right corne</li>
+        </ul>
+        <p><strong>Optional</strong>:&nbsp; Supporting charts below the Required chart.</p>
+        <ul>
+        <li>Optional #1:&nbsp; Summary Chart below the Required chart.</li>
+        <ul>
+        <li>Purpose:&nbsp; Interactive summary chart of categories that count against our goal.</li>
+        <li>Suggested time period of information:&nbsp; Rolling 30 days</li>
+        <li>Functionality:&nbsp;&nbsp;</li>
+        <ul>
+        <li>Ability to click on a bar in the Required chart to view the number of occurrences of each category that occurred on that selected day.</li>
+        </ul>
+        <li>Bar Direction:&nbsp; Vertical or Horizontal</li>
+        <li>Tool tip:&nbsp; Allow user to hoover over any selected bar to see the summary information.</li>
+        <li>Suggested Use:&nbsp; When few instances occur on a daily basis.</li>
+        </ul>
+        </ul>
+        <ul>
+        <li>Optional #2:&nbsp; Stacked bar chart below the required bar chart.</li>
+        <ul>
+        <li>Purpose:&nbsp; Interactive breakdown chart of items that went against our goal.</li>
+        <li>Suggested time period of information:&nbsp; This should equal the number of days/bars that are in the Required chart.&nbsp;</li>
+        <li>Bar Direction:&nbsp; Vertical.</li>
+        <li>Tool tip:&nbsp; Allow user to hoover over any selected bar to see the summary information.</li>
+        <li>Functionality:&nbsp; Provides a breakdown of what occurred for each day and enables the ability to highlight a particular day of focus by selecting a day from the Required chart</li>
+        </ul>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Delivery Modal End -->
+
+<!-- Productivity Modal -->
+<div class="modal fade modal-dialog-scrollable" id="ProductivityModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Quality</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Productivity modal dialog box content -->
+        WIP
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Productivity Modal End -->
+
+
+
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+<script src="" async defer></script>
     </body>
 </html>
