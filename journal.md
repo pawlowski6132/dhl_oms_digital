@@ -73,3 +73,16 @@ I got a prototype working but, the coordinates of the map are off. I'll have to 
 
 Also, i had to link the dpdb1.html page to the index page in order for it to load over the internet. i'll fix that later too.
 
+## Tuesday 4/9/24
+Good fast progress this morning. I got a descent looking header. I'm keeping it simple and not doing a sidebar or any other nav component.
+
+I re-coordinated the image map so the areas on the screen correspond to the actual image. I put the image in a cotainer and centered on the page (still not quite centered).
+
+I put in some modal code and found out how to trigger it from the heatmap.
+
+I included an iframe with a link to the actual report. I have to put this in a div container and style
+
+I'm not sure how I'm going to navigate between pd boards. I can keep them all on one page or switch between pages. I think I'll switch between pages.
+
+I also need to ensure the header is sticky.
+
