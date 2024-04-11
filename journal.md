@@ -86,3 +86,10 @@ I'm not sure how I'm going to navigate between pd boards. I can keep them all on
 
 I also need to ensure the header is sticky.
 
+## Wednesday 4/10/24
+
+I used this cool Text-to-Html editor
+https://wordhtml.com/
+
+
+
