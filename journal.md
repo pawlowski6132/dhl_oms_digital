@@ -91,5 +91,14 @@ I also need to ensure the header is sticky.
 I used this cool Text-to-Html editor
 https://wordhtml.com/
 
+## Monday 4/10/24
 
+I found a good way to server mp4 video files from a static web app. 
+
+The problems I was having were:
+
+1. I couldn't includ them in my vscode project because they were too big for the github commit/sync process.
+2. I wanted to manually find the storage location in Azure Static Web app to see if I could manually load them but, couldn't find it easily.
+
+Finally, I realized I could just use my generic Storage Account [pawlowskistorage]. I created a folder [dhlomsdigital-assets], made it as anonymous as I could and upload a test dpdb1 demo video. This works because the URL of the viceo ["https://pawlowskistorage.blob.core.windows.net/dhlomsdigital-assets/OC Digital PD_0.mp4"] is in the path format that works in html. Specifically, has the the complete file path with the file name and extension. Other links including Google Drive and Team Folder locations have some type of alias html path that won't work. I need the literal file path.
 
